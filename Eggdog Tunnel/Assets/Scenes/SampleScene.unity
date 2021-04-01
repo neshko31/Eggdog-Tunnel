@@ -1098,24 +1098,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e8d857b5266cd847b9c61a3f37ad7ac, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1e8d857b5266cd847b9c61a3f37ad7ac, type: 3}
       propertyPath: m_LocalScale.y
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e8d857b5266cd847b9c61a3f37ad7ac, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.4699999
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e8d857b5266cd847b9c61a3f37ad7ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.854807
+      value: -29.85
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e8d857b5266cd847b9c61a3f37ad7ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.057285
+      value: 9.14
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e8d857b5266cd847b9c61a3f37ad7ac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.559795
+      value: 22.4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1e8d857b5266cd847b9c61a3f37ad7ac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1908,7 +1912,7 @@ MonoBehaviour:
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 257
+    m_Bits: 256
 --- !u!1 &1958530706 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 280d1753130498a4c8d11eff41ace8e1,

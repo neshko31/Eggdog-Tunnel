@@ -1,0 +1,10 @@
+v0.0.1
+----------------------------------------------------------------
+- urađena mogućnost pomeranja lika
+- postavljen mali deo scene
+- dodata mogućnost skakanja
+
+v.0.1.0
+----------------------------------------------------------------
+- popravljeno skakanje
+- dodata mogućnost double jump-a

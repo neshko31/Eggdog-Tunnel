@@ -11,11 +11,12 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 3f;
 
     public Transform groundCheck;
-    public float groundDistance = 0.4f;
+    public float groundDistance = 0.6f;
     public LayerMask groundMask;
 
     Vector3 velocity;
     bool isGrounded;
+    bool jumpCheck;
 
     // Update is called once per frame
     void Update()
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -9f;
+            jumpCheck = false;
         }
 
         float x = Input.GetAxis("Horizontal");
@@ -37,6 +39,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight* -2f * gravity);
+            jumpCheck = true;
+        }
+
+        if (Input.GetButtonDown("Jump") && jumpCheck && !isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            jumpCheck = false;
         }
 
         velocity.y += gravity * Time.deltaTime;
