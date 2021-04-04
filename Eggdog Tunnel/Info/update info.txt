@@ -8,3 +8,8 @@ v.0.1.0
 ----------------------------------------------------------------
 - popravljeno skakanje
 - dodata mogućnost double jump-a
+
+v.0.1.1
+----------------------------------------------------------------
+- dodat još deo scene
+- urađeno otvaranje i zatvaranje vrata
