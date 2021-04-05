@@ -3,13 +3,19 @@ v0.0.1
 - urađena mogućnost pomeranja lika
 - postavljen mali deo scene
 - dodata mogućnost skakanja
+- ubačeni asseti (P&W)Temple Edition i Altar Ruins FREE
 
-v.0.1.0
+v0.1.0
 ----------------------------------------------------------------
 - popravljeno skakanje
 - dodata mogućnost double jump-a
 
-v.0.1.1
+v0.1.1
 ----------------------------------------------------------------
 - dodat još deo scene
 - urađeno otvaranje i zatvaranje vrata
+
+v0.1.2
+----------------------------------------------------------------
+- ubačen asset Sci-Fi Gun Light
+- ubačena puška i omogućeno pucanje
