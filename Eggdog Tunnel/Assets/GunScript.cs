@@ -3,7 +3,7 @@
 public class GunScript : MonoBehaviour
 {
     public float damage = 10f;
-    public float range = 100f;
+    public float range = 500f;
     public float fireRate = 15f;
 
     public Camera fpsCam;
@@ -29,7 +29,7 @@ public class GunScript : MonoBehaviour
         {
             Debug.Log(hit.transform.name);
 
-            Target target = hit.transform.GetComponent<Target>();
+            EnemyAI target = hit.transform.GetComponent<EnemyAI>();
             if (target != null)
             {
                 target.TakeDamage(damage);
