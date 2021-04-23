@@ -28,3 +28,16 @@ v0.2.1
 ----------------------------------------------------------------
 - ubačen navmesh unity dodatak
 - uspešno urađen enemyAI
+
+v0.2.2
+----------------------------------------------------------------
+- dodat meni sa dugmićima za: 
+ - start
+ - options - koji ništa ne radi
+ - quit - koji ništa ne radi osim što baca ispis na konzoli
+
+v0.3.0
+----------------------------------------------------------------
+- napravljen i ubačen eggdog model
+- dodato još malo scene
+- dodati skrinšotovi
