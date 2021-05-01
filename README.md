@@ -1,2 +1,54 @@
 # Eggdog-Tunnel
 Igrica slične ideje i gejmpleja kao .kkrieger, sa drugačijim likovima. (Unity)
+
+----- Update Log -----
+
+v0.0.1
+----------------------------------------------------------------
+- urađena mogućnost pomeranja lika
+- postavljen mali deo scene
+- dodata mogućnost skakanja
+- ubačeni asseti (P&W)Temple Edition i Altar Ruins FREE
+
+v0.1.0
+----------------------------------------------------------------
+- popravljeno skakanje
+- dodata mogućnost double jump-a
+
+v0.1.1
+----------------------------------------------------------------
+- dodat još deo scene
+- urađeno otvaranje i zatvaranje vrata
+
+v0.1.2
+----------------------------------------------------------------
+- ubačen asset Sci-Fi Gun Light
+- ubačena puška i omogućeno pucanje
+
+v0.2.0
+----------------------------------------------------------------
+- postavljen deo scene
+
+v0.2.1
+----------------------------------------------------------------
+- ubačen navmesh unity dodatak
+- uspešno urađen enemyAI
+
+v0.2.2
+----------------------------------------------------------------
+- dodat meni sa dugmićima za: 
+ - start
+ - options - koji ništa ne radi
+ - quit - koji ništa ne radi osim što baca ispis na konzoli
+
+v0.3.0
+----------------------------------------------------------------
+- napravljen i ubačen eggdog model
+- dodato još malo scene
+- dodati skrinšotovi
+
+v0.3.1
+----------------------------------------------------------------
+- enemy može da igraču oduzme health
+- optimizovana igra
+- enemy menja boju u odnosu na to u kom je stanju (Patrolling, Chasing ili Attacking)
