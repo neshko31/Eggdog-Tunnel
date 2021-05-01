@@ -41,3 +41,9 @@ v0.3.0
 - napravljen i ubačen eggdog model
 - dodato još malo scene
 - dodati skrinšotovi
+
+v0.3.1
+----------------------------------------------------------------
+- enemy može da igraču oduzme health
+- optimizovana igra
+- enemy menja boju u odnosu na to u kom je stanju (Patrolling, Chasing ili Attacking)

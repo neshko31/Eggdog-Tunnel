@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -24,6 +26,9 @@ public class EnemyAI : MonoBehaviour
     //stanja
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+
+    //boja za stanja
+    public Material red, green, yellow;
 
     private void Awake()
     {
@@ -70,6 +75,8 @@ public class EnemyAI : MonoBehaviour
         {
             walkPointSet = false;
         }
+
+        GetComponent<MeshRenderer>().material = green;
     }
 
     private void SearchWalkPoint()
@@ -88,6 +95,8 @@ public class EnemyAI : MonoBehaviour
     private void ChasePlayer()
     {
         agent.SetDestination(player.position);
+
+        GetComponent<MeshRenderer>().material = yellow;
     }
 
     private void AttackPlayer()
@@ -100,13 +109,30 @@ public class EnemyAI : MonoBehaviour
         {
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            rb.AddForce(transform.forward * 24f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 4f, ForceMode.Impulse);
 
+            ShootEvent();
+            GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
+
+            foreach (var item in allObjects)
+            {
+                if (item.name == "Sphere(Clone)")
+                {
+                    Destroy(item, 2);
+                }
+            }
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
+
+        GetComponent<MeshRenderer>().material = red;
+    }
+
+    public void ShootEvent ()
+    {
+        GameController.Instance.SetDamage(10);
     }
 
     private void ResetAttack()

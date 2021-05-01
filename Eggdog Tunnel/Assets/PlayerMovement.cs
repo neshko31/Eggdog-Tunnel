@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float health = 100f;
-
     public CharacterController controller;
 
     public float speed = 6f;
@@ -53,11 +51,5 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
-    }
-
-    public void TakeDamage(float amount)
-    {
-        Debug.Log($"health: {health}");
-        health -= amount;
     }
 }
