@@ -6,9 +6,9 @@ public class GameController : Singleton<GameController>
 {
     protected GameController() { }
 
-    private int mHealth = 100;
+    private float mHealth = 100;
 
-    public void SetDamage(int damage)
+    public void SetDamage(float damage)
     {
         mHealth -= damage;
 
@@ -20,7 +20,7 @@ public class GameController : Singleton<GameController>
         Debug.Log(mHealth);
     }
 
-    public int Health
+    public float Health
     {
         get { return mHealth; }
     }

@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    public float damage = 10f;
     public float health = 50f;
 
     //patrola
@@ -112,7 +113,8 @@ public class EnemyAI : MonoBehaviour
             rb.AddForce(transform.forward * 24f, ForceMode.Impulse);
             rb.AddForce(transform.up * 4f, ForceMode.Impulse);
 
-            ShootEvent();
+            Invoke(nameof(ShootEvent), timeBetweenAttacks - 1);
+
             GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
 
             foreach (var item in allObjects)
@@ -132,7 +134,7 @@ public class EnemyAI : MonoBehaviour
 
     public void ShootEvent ()
     {
-        GameController.Instance.SetDamage(10);
+        GameController.Instance.SetDamage(damage);
     }
 
     private void ResetAttack()
