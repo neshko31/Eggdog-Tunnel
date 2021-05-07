@@ -52,3 +52,9 @@ v0.3.1
 - enemy može da igraču oduzme health
 - optimizovana igra
 - enemy menja boju u odnosu na to u kom je stanju (Patrolling, Chasing ili Attacking)
+
+v0.4.0
+----------------------------------------------------------------
+- moguće je videti trenutni health 
+- ubačen ograničeni broj metaka kao i mogućnost da se vidi trenutni broj metaka
+- urađen reload: animacija i kod
