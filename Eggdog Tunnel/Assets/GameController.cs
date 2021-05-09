@@ -6,6 +6,7 @@ public class GameController : Singleton<GameController>
 {
     protected GameController() { }
 
+    private float maxHealth = 100;
     private float mHealth = 100;
 
     public void SetDamage(float damage)
@@ -18,6 +19,24 @@ public class GameController : Singleton<GameController>
         }
 
         Debug.Log(mHealth);
+    }
+
+    public bool RestoreHealth(float health)
+    {
+        if (maxHealth == mHealth)
+        {
+            return false;
+        }
+        if (mHealth+health>=100)
+        {
+            mHealth = 100;
+            return true;
+        }
+        else
+        {
+            mHealth += health;
+            return true;
+        }
     }
 
     public float Health

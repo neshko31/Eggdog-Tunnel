@@ -16,7 +16,8 @@ public class GunScript : MonoBehaviour
     public int maxAmmo = 10;
     private int currentAmmo;
     private int shotBullets = 0;
-    private int restOfAmmo;
+    public int restOfAmmo;
+    private int restOfAmmo1;
 
     public float reloadTime = 1f;
     private bool isReloading = false;
@@ -34,23 +35,26 @@ public class GunScript : MonoBehaviour
 
     void Start()
     {
-        if (currentAmmo == -1)
-        {
-            currentAmmo = maxAmmo;
-        }
-        restOfAmmo = startAmmo;
+        Debug.Log(startAmmo - maxAmmo);
+        currentAmmo = maxAmmo;
+        restOfAmmo = restOfAmmo1 = startAmmo - maxAmmo;
     }
 
     void Update()
     {
         if (currentAmmo == 0 && restOfAmmo == 0)
         {
-            //ovde neka logika ako se nema metaka i sam return zaustavlja pucanje
             return;
         }
 
         if (isReloading)
         {
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && maxAmmo != currentAmmo && restOfAmmo > 0)
+        {
+            StartCoroutine(Reload());
             return;
         }
 
@@ -67,6 +71,12 @@ public class GunScript : MonoBehaviour
         }
     }
 
+    public void RestoreAmmo (int newAmmo)
+    {
+        restOfAmmo += newAmmo;
+        restOfAmmo1 += newAmmo;
+    }
+
     IEnumerator Reload()
     {
         isReloading = true;
@@ -79,8 +89,26 @@ public class GunScript : MonoBehaviour
 
         yield return new WaitForSeconds(0.25f);
 
-        restOfAmmo = startAmmo - maxAmmo - shotBullets;
-        currentAmmo = maxAmmo;
+        if (restOfAmmo == maxAmmo)
+        {
+            int ammo = restOfAmmo;
+            restOfAmmo = currentAmmo;
+            currentAmmo = ammo;
+        }
+        else if (restOfAmmo <= maxAmmo)
+        {
+            while (currentAmmo < maxAmmo && restOfAmmo > 0)
+            {
+                currentAmmo++;
+                restOfAmmo--;
+            }
+        }
+        else
+        {
+            restOfAmmo = restOfAmmo1 - shotBullets;
+            currentAmmo = maxAmmo;
+        }
+
         isReloading = false;
     }
 
