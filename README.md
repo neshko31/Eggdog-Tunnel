@@ -67,3 +67,8 @@ v0.4.1
 - popravljen reload i dodata mogućnost reloada sa R
 - dodat asset Ammo Box
 - dodata mogućnost dodavanja još municije
+
+v0.4.2
+----------------------------------------------------------------
+- dodat pause menu sa opcijama: Resume, Quit i Menu(disabled button)
+- izmenjen main menu
