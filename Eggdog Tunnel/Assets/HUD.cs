@@ -20,7 +20,7 @@ public class HUD : MonoBehaviour
         mTxtHealth.text = "+ " + GameController.Instance.Health.ToString();
 
         GunScript[] armyUnits = (GunScript[])FindObjectsOfType(typeof(GunScript));
-        //GunScript ammo = new GunScript();
+
         foreach (var item in armyUnits)
         {
             if (item.name == "SciFiGunLightBlue")
@@ -29,11 +29,5 @@ public class HUD : MonoBehaviour
                 break;
             }
         }
-        
-
-        /*
-        GameObject pera = GameObject.Find("SciFiGunLightBlue");
-
-        mTxtAmmo = pera.*/
     }
 }

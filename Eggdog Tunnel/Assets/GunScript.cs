@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GunScript : MonoBehaviour
 {
@@ -35,39 +36,42 @@ public class GunScript : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(startAmmo - maxAmmo);
+        //Debug.Log(startAmmo - maxAmmo);
         currentAmmo = maxAmmo;
         restOfAmmo = restOfAmmo1 = startAmmo - maxAmmo;
     }
 
     void Update()
     {
-        if (currentAmmo == 0 && restOfAmmo == 0)
+        if (!PauseMenu.GamePaused)
         {
-            return;
-        }
+            if (currentAmmo == 0 && restOfAmmo == 0)
+            {
+                return;
+            }
 
-        if (isReloading)
-        {
-            return;
-        }
+            if (isReloading)
+            {
+                return;
+            }
 
-        if (Input.GetKeyDown(KeyCode.R) && maxAmmo != currentAmmo && restOfAmmo > 0)
-        {
-            StartCoroutine(Reload());
-            return;
-        }
+            if (Input.GetKeyDown(KeyCode.R) && maxAmmo != currentAmmo && restOfAmmo > 0)
+            {
+                StartCoroutine(Reload());
+                return;
+            }
 
-        if (currentAmmo <= 0)
-        {
-            StartCoroutine(Reload());
-            return;
-        }
+            if (currentAmmo <= 0)
+            {
+                StartCoroutine(Reload());
+                return;
+            }
 
-        if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
-        {
-            nextTimeToFire = Time.time + 1f / fireRate;
-            Shoot();
+            if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
+            {
+                nextTimeToFire = Time.time + 1f / fireRate;
+                Shoot();
+            }
         }
     }
 
