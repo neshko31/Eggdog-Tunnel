@@ -59,3 +59,11 @@ v0.4.0
 - moguće je videti trenutni health 
 - ubačen ograničeni broj metaka kao i mogućnost da se vidi trenutni broj metaka
 - urađen reload: animacija i kod
+
+v0.4.1
+----------------------------------------------------------------
+- dodat asset First-Aid Set
+- dodata mogućnost regeneracije
+- popravljen reload i dodata mogućnost reloada sa R
+- dodat asset Ammo Box
+- dodata mogućnost dodavanja još municije
