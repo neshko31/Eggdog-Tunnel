@@ -66,3 +66,8 @@ v0.4.2
 ----------------------------------------------------------------
 - dodat pause menu sa opcijama: Resume, Quit i Menu(disabled button)
 - izmenjen main menu
+
+v0.4.3
+----------------------------------------------------------------
+- popravljen Menu button u pause menu opcijama
+- izmenjen deo oko FPS Playera

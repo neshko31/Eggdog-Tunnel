@@ -7,17 +7,18 @@ public class HUD : MonoBehaviour
 {
     public Text mTxtHealth;
     public Text mTxtAmmo;
+    public HealthScript p;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        mTxtHealth.text = "+ " + GameController.Instance.Health.ToString();
+        mTxtHealth.text = "+ " + p.Health.ToString();//GameController.Instance.Health.ToString();
 
         GunScript[] armyUnits = (GunScript[])FindObjectsOfType(typeof(GunScript));
 

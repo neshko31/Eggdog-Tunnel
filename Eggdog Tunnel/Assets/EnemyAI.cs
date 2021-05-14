@@ -8,6 +8,7 @@ public class EnemyAI : MonoBehaviour
     public NavMeshAgent agent;
 
     public Transform player;
+    public HealthScript p;
 
     public LayerMask whatIsGround, whatIsPlayer;
 
@@ -134,7 +135,10 @@ public class EnemyAI : MonoBehaviour
 
     public void ShootEvent ()
     {
-        GameController.Instance.SetDamage(damage);
+        float newHealth = p.Health - damage;
+        p.Health = newHealth;
+        Debug.Log(newHealth);
+        //GameController.Instance.SetDamage(damage);
     }
 
     private void ResetAttack()
