@@ -135,9 +135,10 @@ public class EnemyAI : MonoBehaviour
 
     public void ShootEvent ()
     {
-        float newHealth = p.Health - damage;
-        p.Health = newHealth;
-        Debug.Log(newHealth);
+        //float newHealth = p.Health - damage;
+        //p.Health = newHealth;
+        p.SetDamage(damage);
+        //Debug.Log(newHealth);
         //GameController.Instance.SetDamage(damage);
     }
 

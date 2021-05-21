@@ -20,7 +20,9 @@ public class MouseLook : MonoBehaviour
     {
         if (!PauseMenu.GamePaused)
         {
+            Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
 
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
@@ -34,6 +36,7 @@ public class MouseLook : MonoBehaviour
         else 
         {
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }

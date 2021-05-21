@@ -29,6 +29,11 @@ public class HUD : MonoBehaviour
                 mTxtAmmo.text = item.CurrentAmmo + "/" + item.RestOfAmmo;
                 break;
             }
+            if (item.name == "SciFiGunLightRad")
+            {
+                mTxtAmmo.text = item.CurrentAmmo + "/" + item.RestOfAmmo;
+                break;
+            }
         }
     }
 }

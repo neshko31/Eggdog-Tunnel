@@ -71,3 +71,9 @@ v0.4.3
 ----------------------------------------------------------------
 - popravljen Menu button u pause menu opcijama
 - izmenjen deo oko FPS Playera
+
+v0.5.0
+----------------------------------------------------------------
+- dodati skrinšotovi
+- dodata još jedna puška
+- urađen weapon switching
