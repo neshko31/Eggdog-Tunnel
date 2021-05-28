@@ -83,3 +83,7 @@ v0.5.0
 - dodati skrinšotovi
 - dodata još jedna puška
 - urađen weapon switching
+
+v0.6.0
+----------------------------------------------------------------
+- još enemy-ja i kitova sam dodao
