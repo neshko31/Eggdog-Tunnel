@@ -1,5 +1,5 @@
 # Eggdog-Tunnel
-Igrica slične ideje i gejmpleja kao .kkrieger, sa drugačijim likovima. (Unity)
+Igrica slične ideje i načina igranja kao .kkrieger, sa drugačijim likovima. (Unity)
 
 Update Log
 ----------------------------------------------------------------
@@ -86,4 +86,4 @@ v0.5.0
 
 v0.6.0
 ----------------------------------------------------------------
-- još enemy-ja i kitova sam dodao
+- još enemy-ja i kitova je dodato
